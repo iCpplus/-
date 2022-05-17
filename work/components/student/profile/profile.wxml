@@ -1,0 +1,80 @@
+<!--components/student/profile/profile.wxml-->
+<view class="profile">
+  <view class="profile-card">
+    <image class="profile-cover" src="{{userInfo.iconUrl?userInfo.iconUrl:'/assets/images/logo.png'}}"></image>
+    <view class="profile-info">
+      <view class="profile-name">{{userInfo.nickname||'超级吃货'}}</view>
+      <view class="profile-other" bindtap="goAccountSetting">账户设置</view>
+    </view>
+  </view>
+
+
+  <view class="my-wallet">
+    <view class="grid1 wallet-item">
+      <image class="wallet-icon" src="/assets/images/wallet.png"></image>
+
+      <view class="wallet-text">我的钱包</view>
+    </view>
+    <view class="wallet-item">
+      <view>{{userInfo.money}}</view>
+      <view class="wallet-text">余额</view>
+    </view>
+    <view class="wallet-item">
+      <view>0</view>
+      <view class="wallet-text">红包</view>
+    </view>
+    <view class="wallet-item">
+      <view>0</view>
+      <view class="wallet-text">卡包</view>
+    </view>
+  </view>
+  <view class="main-contain">
+    <view class="setting-contain">
+      <view class="setting-item" bindtap="goAddressManage">
+        <image src="/assets/images/adress.png"></image>
+        <view class="item-text">我的地址</view>
+      </view>
+      <view class="setting-item">
+        <image src="/assets/images/客服.png" bindtap="showService"></image>
+        <view class="item-text">我的客服</view>
+      </view>
+      <view class="setting-item">
+        <image src="/assets/images/购物车空.png"></image>
+        <view class="item-text">购物车</view>
+      </view>
+      <view class="setting-item">
+        <image src="/assets/images/添加关注、关注.png"></image>
+        <view class="item-text">店铺关注</view>
+      </view>
+      <view class="setting-item">
+        <image src="/assets/images/评价.png"></image>
+        <view class="item-text">评价中心</view>
+      </view>
+      <view class="setting-item" bindtap="showVIP">
+        <image src="/assets/images/会员.png"></image>
+        <view class="item-text">会员</view>
+      </view>
+      <view class="setting-item" bindtap="inviteUser">
+        <image src="/assets/images/邀请.png"></image>
+        <view class="item-text">邀请好友</view>
+      </view>
+      <view class="setting-item" bindtap="showRules">
+        <image src="/assets/images/规则.png"></image>
+        <view class="item-text">资质规则</view>
+      </view>
+
+      <view class="setting-item" bindtap="showAgreement">
+        <image src="/assets/images/用户协议.png"></image>
+        <view class="item-text">使用协议</view>
+      </view>
+
+    </view>
+  </view>
+  <van-share-sheet
+  show="{{ showShare }}"
+  title="邀请好友"
+  options="{{ options }}"
+  bind:select="onSelect"
+  bind:close="onClose"
+/>
+</view>

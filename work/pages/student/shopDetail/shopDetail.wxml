@@ -1,0 +1,116 @@
+<!--pages/student/shopDetail/shopDetail.wxml-->
+<view class="shop-detail">
+  <van-action-sheet show="{{ show }}" bind:close="onClose">
+    <view class="selected-foods">
+      <view class="sheet-top">
+        <view>已选商品</view>
+        <view style="flex:1"></view>
+        <view bindtap="clearAll">清 空</view>
+      </view>
+      <view class="selected-food" wx:for="{{selectFoods}}" wx:key="item.food_id">
+        <image src="{{item.food_icon}}"></image>
+        <view class="selected-food-info">
+          <view class="selected-food-name">{{item.food_name}}</view>
+          <view class="selected-price">￥ {{item.food_price}}</view>
+        </view>
+        <view class="selected-oprate">
+          <view class="btn1" data-id="{{item.food_id}}" bindtap="foodNumDecrease">-</view>
+          <text> {{item.num}} </text>
+          <view class="btn2" data-id="{{item.food_id}}" bindtap="foodNumAdd" >+</view>
+        </view>
+      </view>
+      <view class="holder"></view>
+    </view>
+  </van-action-sheet>
+  <view class="shopping-cart" bindtap="showSheet">
+    <view class="box">
+      <image src="/assets/images/box-active.png" alt=""></image>
+      <view class="num">{{selectNum}}</view>
+    </view>
+    <view class="box-text">
+      <view>￥{{allPrice}}</view>
+      <view class="small-text">配送费 ￥{{shopDetail.post_price}}</view>
+    </view>
+    <van-button color="{{minPriceFlag?'#838ecb':'#383838'}}" loading="{{false}}" size="small" class="submit-btn" round bindtap="goDetailConfirm">{{minPriceFlag?'去结算':'￥'+ shopDetail.min_price + '起送'}}</van-button>
+  </view>
+  <view class="top"></view>
+  <view class="shop-card">
+    <view class="shop-info">
+      <view class="shop-name">{{shopDetail.store_name}}</view>
+      <view class="shop-desc">月销 {{shopDetail.order_quantity}}</view>
+    </view>
+    <view style="flex:1"></view>
+    <image src="{{shopDetail.store_icon}}"></image>
+  </view>
+  <view class="main">
+    <van-sticky>
+      <van-tabs active="{{ active }}">
+        <van-tab title="点餐">
+          <view class="tab-context-contain">
+            <view class="clear">
+              <van-sticky offset-top="{{ 50 }}">
+                <view style="display:flex">
+                  <van-sidebar active-key="{{ activeKey }}">
+                    <van-sidebar-item bindtap="getAll" title="全部" />
+                    <van-sidebar-item  wx:for="{{cateList}}" data-cateid="{{item.category_id}}" bindtap="selectCate" title="{{item.category_name}}" />
+                  </van-sidebar>
+                </view>
+              </van-sticky>
+            </view>
+            <view class="goods-list">
+              <view wx:for="{{currentList}}" class="goods-card">
+                <image src="{{item.food_icon}}">
+                </image>
+                <view class="card-info">
+                  <view class="card-info-top">
+                    {{item.food_name}}
+                  </view>
+                  <!-- <view class="card-info-mid">
+                    月销 234
+                  </view> -->
+                  <view class="card-info-bottom">
+                    <view class="price"> ￥ {{item.food_price}} </view>
+                    <view style="flex:1"></view>
+                    <view class="btn" data-food="{{item}}" bindtap="selectFood">+</view>
+                  </view>
+                </view>
+
+              </view>
+              <view class="placeholder"></view>
+            </view>
+
+          </view>
+        </van-tab>
+        <van-tab title="评价">
+          <view class="comment-list">
+            <view class="comment-card" wx:for="{{commentList}}" wx:key="{{item.review_id}}">
+              <view class="user-info">
+                <image class="user-img" src="/assets/images/logo.png"></image>
+                <view class="user-text">
+                  <view class="user-name">匿名用户</view>
+                  <view class="time">{{item.create_time}}</view>
+                </view>
+              </view>
+              <view class="stars">
+                <van-rate readonly value="{{ item.start_num }}" size="{{ 20 }}" color="#ffd21e" void-icon="star" void-color="#eee" />
+              </view>
+              <view class="user-comment">
+                用户评价：{{item.content}}
+              </view>
+              <view wx:if="{{item.store_content}}" class="shop-comment">
+                商家回复：{{item.store_content||''}}
+              </view>
+              <view wx:if="{{item.rider_content}}" class="rider-comment">
+                骑手回复：{{item.rider_content||''}}
+              </view>
+            </view>
+          </view>
+        </van-tab>
+        <van-tab disabled></van-tab>
+        <van-tab disabled></van-tab>
+        <van-tab disabled></van-tab>
+      </van-tabs>
+    </van-sticky>
+  </view>
+
+</view>

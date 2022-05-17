@@ -1,0 +1,120 @@
+<!--components/student/order/order.wxml-->
+<view class="order-component">
+  <van-notify id="van-notify" />
+  <van-tabs active="{{ active }}" bind:change="onChange" sticky>
+    <van-tab title="全部"  name="a">
+      <view class="list-contain">
+        <view class="order-card" wx:for="{{currentList}}" wx:key="{{item.order_id}}" data-order="item"
+          data-item="{{item}}" bindtap="goOrderDetail">
+          <view class="card-top">
+            <view class="shop-name">{{item.store_name}}</view>
+            <view style="flex:1"></view>
+            <view class="order-status">
+              {{item.order_status==0?'已下单':item.order_status==1?'商家已接单':item.order_status==2?'配送中':item.order_status==3?'已完成':item.order_status==5?'已拒绝':item.order_status==6?'已评价':item.order_status==7?'已送达':'已取消'}}
+            </view>
+          </view>
+          <view class="card-mid">
+            <view class="img-list">
+              <image wx:for="{{item.foods}}" wx:for-item="food" wx:key="item.food_id" class="goods-img"
+                src="{{food.food_icon}}"></image>
+            </view>
+            <view style="flex:1"></view>
+            <view class="goods-num-contain">
+              <view class="goods-price">￥ {{item.order_amount+item.post_price}}</view>
+              <view class="goods-num">共{{item.foods.length}}件</view>
+            </view>
+          </view>
+          <view class="card-bottom">
+            <van-button wx:if="{{item.order_status==0||item.order_status==1}}" class="btn" round type="info" plain
+              size="mini" data-orderid="{{item.order_id}}" catchtap="cancelOrder">取消</van-button>
+            <van-button wx:if="{{item.order_status==3}}" class="btn" round type="info" data-item="{{item}}"
+              catchtap="goComment" plain size="mini">评价</van-button>
+            <van-button wx:if="{{item.order_status==7}}" data-item="{{item}}" catchtap="confirmOrder" class="btn"
+              round type="info" plain size="mini">确认收货</van-button>
+            <van-button wx:if="{{item.order_status==6}}" data-item="{{item}}" catchtap="lookComment" class="btn" round
+              type="info" plain size="mini">查看评价</van-button>
+            <!-- <van-button wx:if="{{item.order_status==4||item.order_status==3||item.order_status==6}}" class="btn" round type="info" plain size="mini">删除</van-button> -->
+          </view>
+
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="待评价" name="b">
+      <view class="list-contain">
+        <view class="order-card" wx:for="{{currentList}}" wx:key="{{item.order_id}}" data-order="item"
+          data-item="{{item}}" bindtap="goOrderDetail">
+          <view class="card-top">
+            <view class="shop-name">{{item.store_name}}</view>
+            <view style="flex:1"></view>
+            <view class="order-status">
+              {{item.order_status==0?'已下单':item.order_status==1?'商家已接单':item.order_status==2?'配送中':item.order_status==3?'已完成':item.order_status==5?'已拒绝':item.order_status==6?'已评价':item.order_status==7?'已送达':'已取消'}}
+            </view>
+          </view>
+          <view class="card-mid">
+            <view class="img-list">
+              <image wx:for="{{item.foods}}" wx:for-item="food" wx:key="item.food_id" class="goods-img"
+                src="{{food.food_icon}}"></image>
+            </view>
+            <view style="flex:1"></view>
+            <view class="goods-num-contain">
+              <view class="goods-price">￥ {{item.order_amount+item.post_price}}</view>
+              <view class="goods-num">共{{item.foods.length}}件</view>
+            </view>
+          </view>
+          <view class="card-bottom">
+            <van-button wx:if="{{item.order_status==0||item.order_status==1}}" class="btn" round type="info" plain
+              size="mini" data-orderid="{{item.order_id}}" catchtap="cancelOrder">取消</van-button>
+            <van-button wx:if="{{item.order_status==3}}" class="btn" round type="info" data-item="{{item}}"
+              catchtap="goComment" plain size="mini">评价</van-button>
+            <van-button wx:if="{{item.order_status==7}}" data-item="{{item}}" catchtap="confirmOrder" class="btn"
+              round type="info" plain size="mini">确认收货</van-button>
+            <van-button wx:if="{{item.order_status==6}}" data-item="{{item}}" catchtap="lookComment" class="btn" round
+              type="info" plain size="mini">查看评价</van-button>
+            <!-- <van-button wx:if="{{item.order_status==4||item.order_status==3||item.order_status==6}}" class="btn" round type="info" plain size="mini">删除</van-button> -->
+          </view>
+
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="退款" name="c">
+      <view class="list-contain">
+        <view class="order-card" wx:for="{{currentList}}" wx:key="{{item.order_id}}" data-order="item"
+          data-item="{{item}}" bindtap="goOrderDetail">
+          <view class="card-top">
+            <view class="shop-name">{{item.store_name}}</view>
+            <view style="flex:1"></view>
+            <view class="order-status">
+              {{item.order_status==0?'已下单':item.order_status==1?'商家已接单':item.order_status==2?'配送中':item.order_status==3?'已完成':item.order_status==5?'已拒绝':item.order_status==6?'已评价':item.order_status==7?'已送达':'已取消'}}
+            </view>
+          </view>
+          <view class="card-mid">
+            <view class="img-list">
+              <image wx:for="{{item.foods}}" wx:for-item="food" wx:key="item.food_id" class="goods-img"
+                src="{{food.food_icon}}"></image>
+            </view>
+            <view style="flex:1"></view>
+            <view class="goods-num-contain">
+              <view class="goods-price">￥ {{item.order_amount+item.post_price}}</view>
+              <view class="goods-num">共{{item.foods.length}}件</view>
+            </view>
+          </view>
+          <view class="card-bottom">
+            <van-button wx:if="{{item.order_status==0||item.order_status==1}}" class="btn" round type="info" plain
+              size="mini" data-orderid="{{item.order_id}}" catchtap="cancelOrder">取消</van-button>
+            <van-button wx:if="{{item.order_status==3}}" class="btn" round type="info" data-item="{{item}}"
+              catchtap="goComment" plain size="mini">评价</van-button>
+            <van-button wx:if="{{item.order_status==7}}" data-item="{{item}}" catchtap="confirmOrder" class="btn"
+              round type="info" plain size="mini">确认收货</van-button>
+            <van-button wx:if="{{item.order_status==6}}" data-item="{{item}}" catchtap="lookComment" class="btn" round
+              type="info" plain size="mini">查看评价</van-button>
+            <!-- <van-button wx:if="{{item.order_status==4||item.order_status==3||item.order_status==6}}" class="btn" round type="info" plain size="mini">删除</van-button> -->
+          </view>
+
+        </view>
+      </view>
+    </van-tab>
+    <van-tab disabled></van-tab>
+    <van-tab disabled></van-tab>
+  </van-tabs>
+
+</view>

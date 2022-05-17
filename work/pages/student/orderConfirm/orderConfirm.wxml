@@ -1,0 +1,42 @@
+<!--pages/student/orderConfirm/orderConfirm.wxml-->
+<view class="order-confirm">
+
+  <view class="top">
+    <view class="tip">
+      温馨提示： 请适量点餐，避免浪费
+    </view>
+    <view class="address" bindtap="goAddressManage">
+      <van-cell-group>
+        <van-cell title="收货地址" value="{{addressInfo.address}}" label="{{addressInfo.name+' '+addressInfo.phone}}" />
+      </van-cell-group>
+    </view>
+  </view>
+  <view>
+  </view>
+  <view class="order-content">
+    <view class="shop-name">{{detail.shopDetail.store_name}}</view>
+    <view class="food" wx:for="{{detail.foods}}" wx:key="item.food_id">
+      <image src="{{item.food_icon}}"></image>
+      <view class="food-text">
+        <view class="food-name">{{item.food_name}}</view>
+        <view class="food-num">× {{item.num}}</view>
+      </view>
+      <view class="food-price">￥{{item.food_price}}</view>
+    </view>
+    <view class="rider">
+      <view class="rider-text">配送费</view>
+      <view style="flex:1"></view>
+      <view class="rider-price">￥{{detail.shopDetail.post_price}}</view>
+    </view>
+    <view class="all">
+      <view class="all-price">总计 ￥{{detail.allPrice+detail.shopDetail.post_price}}</view>
+    </view>
+  </view>
+  <view class="form">
+    <van-cell-group>
+      <van-field model:value="{{ orderTip }}" label="备注" placeholder="请输入备注" border="{{ false }}" />
+    </van-cell-group>
+    <button class="submit" bindtap="submit">提交订单</button>
+  </view>
+  <van-notify id="van-notify" />
+</view>

@@ -1,0 +1,10 @@
+<!--pages/student/addressManage/adressList/adressList.wxml-->
+<view class="addressList">
+  <van-swipe-cell wx:for="{{addressList}}" wx:key="item.address_id" id="swipe-cell" right-width="{{ 65 }}"
+    left-width="{{ 0 }}">
+    <van-cell title="{{item.address}}" data-address="{{item}}" bindtap="editAddress" is-link
+      label="{{item.name+' '+item.phone}}" value="{{item.default_address==1?'默认':''}}" />
+      <view class="del-btn" data-addressid="{{item.address_id}}" bindtap="deleteAdress" slot="right">删除</view>
+  </van-swipe-cell>
+  <button bindtap="addAddress">新增地址</button>
+</view>

@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "home":"/components/shop/home/home",
+    "order":"/components/shop/order/order",
+    "profile":"/components/shop/profile/profile"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#828dc9",
+  "backgroundTextStyle":"dark"
+
+}

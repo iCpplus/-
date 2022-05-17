@@ -1,0 +1,5 @@
+<!--components/login/loginLogo.wxml-->
+<view class="login-logo">
+  <image class="logo" src="/assets/images/logo.png"></image>
+  <text class="logo-text">中工好饿</text>
+</view>

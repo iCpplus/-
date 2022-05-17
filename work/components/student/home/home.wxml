@@ -1,0 +1,51 @@
+<!--components/student/home/home.wxml-->
+<view class="student-home">
+  <view class="placehoder"></view>
+  <view class="contain">
+    <van-sticky>
+      <view class="search-contain">
+        <van-search model:value="{{ value }}" shape="round" bind:search="onSearch" background="#"
+          placeholder="请输入搜索关键词" />
+      </view>
+    </van-sticky>
+    <view class="swiper-contain">
+      <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+        duration="{{duration}}">
+        <block wx:for="{{activityList}}" wx:key="{{url}}">
+          <swiper-item>
+            <image data-item="{{item}}" bindtap="goAnnounce" src="{{item.url}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <van-sticky offset-top="{{ 50 }}">
+      <van-dropdown-menu active-color="#f55f62">
+        <van-dropdown-item bind:change="onChange1" value="{{ value1 }}" options="{{ option1 }}" />
+        <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+      </van-dropdown-menu>
+    </van-sticky>
+
+    <view class="card-contain">
+      <view class="card" wx:for="{{shopList}}" wx:key="item.store_id" data-item="{{item}}"
+        bindtap="goShopPage">
+        <view class="mask" wx:if="{{item.store_status!=1}}">
+        <view>未营业</view>
+        </view>
+        <image class="shop-cover" src="{{item.store_icon}}"></image>
+        <view class="card-content">
+          <view class="shop-name">{{item.store_name}}</view>
+          <!-- <view class="shop-info">评分：
+            <van-rate readonly value="{{ item.store_score }}" size="{{ 15 }}" color="#ffd21e" void-icon="star" void-color="#eee" /> {{ item.store_score }}
+          </view> -->
+          <view style="margin-top:5rpx" class="shop-desc">起送费：{{item.min_price}}￥</view>
+          <view class="shop-desc">配送费：{{item.post_price}}￥</view>
+          <view class="shop-order-num">月销：{{item.order_quantity}}</view>
+        </view>
+      </view>
+      <view class="holder2"></view>
+    </view>
+  </view>
+  <van-cell-group>
+    <van-field value="{{ orderTip }}" placeholder="请输入用户名" border="{{ false }}" bind:change="onChange" label="备注" />
+  </van-cell-group>
+</view>

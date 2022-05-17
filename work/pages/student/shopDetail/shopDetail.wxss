@@ -1,0 +1,277 @@
+/* pages/student/shopDetail/shopDetail.wxss */
+.shop-detail {
+  position: relative;
+}
+
+.top {
+  height: 70rpx;
+  background: #838ecb;
+}
+
+.shop-card {
+  background: #f7f8fa;
+  width: 90%;
+  border-radius: 30rpx;
+  padding: 20rpx;
+  display: flex;
+  margin-left: 2.5%;
+  align-items: center;
+  position: absolute;
+  top: 40rpx;
+  height: 150rpx;
+}
+
+.shop-desc {
+  font-size: small;
+  margin-top: 20rpx;
+}
+
+.shop-card image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.main {
+  margin-top: 150rpx;
+  overflow: scroll;
+}
+
+.tab-context-contain {
+  display: flex;
+  padding-top: 20rpx;
+  overflow: hidden;
+}
+
+.goods-list {
+  padding: 10rpx;
+  overflow-y: auto;
+  height: 62vh;
+}
+
+.goods-card {
+  width: 570rpx;
+  height: 130rpx;
+  display: flex;
+  border-radius: 6rpx;
+  background: #f7f8fa;
+  margin-bottom: 20rpx;
+}
+
+.goods-card image {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 6rpx;
+}
+
+.card-info {
+  box-sizing: border-box;
+  padding: 3rpx;
+}
+
+.card-info-top {
+  font-size: large;
+  width: 420rpx;
+}
+
+.card-info-mid {
+  font-size: small;
+}
+
+.card-info-bottom {
+  display: flex;
+}
+
+.card-info-bottom .price {
+  color: #f07977;
+}
+
+.card-info-bottom .btn {
+  border-radius: 50%;
+  background: #838ecb;
+  color: #fff;
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35rpx;
+  line-height: 35rpx;
+
+}
+
+/* .clear {
+  width: 170rpx;
+} */
+.shopping-cart {
+  height: 15vh;
+  background: #f7f8fa;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  box-sizing: border-box;
+  padding: 10rpx;
+}
+
+.placeholder {
+  height: 5vh;
+}
+
+.box {
+  width: 130rpx;
+  height: 80rpx;
+  position: absolute;
+  display: flex;
+  left: 30rpx;
+  bottom: 70rpx;
+}
+
+.box-text {
+  position: absolute;
+  left: 160rpx;
+  bottom: 70rpx;
+}
+
+.small-text {
+  font-size: small;
+}
+
+.submit-btn {
+  position: absolute;
+  right: 30rpx;
+  bottom: 70rpx;
+}
+
+.box image {
+  height: 79rpx;
+  width: 90rpx;
+}
+
+.box .num {
+  position: relative;
+  right: 20rpx;
+  height: 50rpx;
+  width: 50rpx;
+  background: #f15d58;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.comment-list {
+  height: 64vh;
+  overflow-y: scroll;
+  padding: 20rpx;
+}
+
+.comment-card {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20rpx;
+  background: #f7f8fa;
+  border-radius: 7rpx;
+  font-size: medium;
+  margin-bottom: 20rpx;
+}
+
+.user-info {
+  display: flex;
+}
+
+.user-info image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.user-name {
+  font-size: medium;
+}
+
+.time {
+  font-size: small;
+  margin-top: 5rpx;
+}
+
+.user-comment {
+  margin-top: 10rpx;
+}
+
+.shop-comment {
+  margin-top: 10rpx;
+}
+
+.rider-comment {
+  margin-top: 10rpx;
+}
+.selected-foods{
+padding: 20rpx;
+}
+.sheet-top{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.selected-food{
+  display: flex;
+  position: relative;
+  background: #f7f8fa;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.selected-food image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.selected-food-info{
+  margin-left: 20rpx;
+}
+.selected-food-name{
+  font-size: medium;
+}
+.selected-price{
+  font-size: medium;
+  margin-top: 10rpx;
+  color: #f15d58;
+}
+.selected-oprate{
+  position: absolute;
+  right: 20rpx;
+  top: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.selected-oprate .btn1{
+  height: 40rpx;
+  width: 40rpx;
+  background: #ec5d5e;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.selected-oprate text{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.selected-oprate .btn2{
+  height: 40rpx;
+  width: 40rpx;
+  background: #838ecb;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.holder{
+  height: 200rpx;
+}

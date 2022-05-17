@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/login/login/login",
+    "pages/login/studentLogin/studentLogin",
+    "pages/student/main/main",
+    "pages/login/shopLogin/shopLogin",
+    "pages/login/riderLogin/riderLogin",
+    "pages/student/shopDetail/shopDetail",
+    "pages/account/account",
+    "pages/login/register/register",
+    "pages/student/addressManage/adressList/adressList",
+    "pages/student/addressManage/addressCreate/addressCreate",
+    "pages/rider/main/main",
+    "pages/shop/main/main",
+    "pages/student/orderDetail/orderDetail",
+    "pages/shop/orderDetail/orderDetail",
+    "pages/student/orderConfirm/orderConfirm",
+    "pages/shop/shopEdit/shopEdit",
+    "pages/shop/foodAdd/foodAdd",
+    "pages/accountManage/userInfo/userInfo",
+    "pages/accountManage/passwordUpdate/passwordUpdate",
+    "pages/student/comment/comment",
+    "pages/shop/cateManage/cateManage",
+    "pages/student/announce/announce"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "navigationStyle": "custom",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#838ecb",
+    "navigationBarTitleText": "中工好饿",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-share-sheet": "@vant/weapp/share-sheet/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "van-picker": "@vant/weapp/picker/index"
+  }
+}

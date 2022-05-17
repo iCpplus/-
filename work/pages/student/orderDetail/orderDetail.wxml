@@ -1,0 +1,40 @@
+<!--pages/student/orderDetail/orderDetail.wxml-->
+<view class="order-detail">
+  <view class="holder">
+  </view>
+  <view class="main">
+    <!-- <view class="card">
+      <view>感谢信任，期待再次光临</view>
+    </view> -->
+    <view class="order-content">
+      <view class="shop-name">中工华莱士 ></view>
+      <view class="food" wx:for="{{3}}">
+        <image src="/assets/images/logo.png"></image>
+        <view class="food-text">
+          <view class="food-name">秘制汉堡</view>
+          <view class="food-num">× 1</view>
+        </view>
+        <view class="food-price">￥16</view>
+      </view>
+      <view class="rider">
+        <view class="rider-text">配送费</view>
+        <view style="flex:1"></view>
+        <view class="rider-price">￥2</view>
+      </view>
+      <view class="all">
+        <view class="all-price">总计 ￥50</view>
+      </view>
+    </view>
+    <van-divider />
+    <view class="detail">
+      <van-cell-group>
+        <van-cell title="收货地址" value="中工南苑二号楼113" />
+        <van-cell title="收货人信息" value="小明 1991748124721" />
+        <van-cell title="备注" value="多放辣椒" />
+        <van-cell title="订单编号" value="135353266323" />
+        <van-cell title="送达时间" value="2022-03-09 15：33" />
+        <van-cell title="下单时间" value="2022-03-09 14：53" />
+      </van-cell-group>
+    </view>
+  </view>
+</view>

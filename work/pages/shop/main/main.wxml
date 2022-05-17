@@ -1,0 +1,14 @@
+<!--pages/shop/main/main.wxml-->
+<view>
+  <van-notify id="van-notify" />
+  <home wx:if="{{active===0}}"></home>
+  <order wx:if="{{active===1}}"></order>
+  <profile wx:if="{{active===2}}"></profile>
+  <van-tabbar active="{{ active }}" bind:change="onChange">
+    <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+    <van-tabbar-item icon="orders-o">订单</van-tabbar-item>
+    <van-tabbar-item icon="user-o">我的</van-tabbar-item>
+  </van-tabbar>
+  <van-toast id="van-toast" />
+  <van-dialog id="van-dialog" />
+</view>

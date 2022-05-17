@@ -1,0 +1,17 @@
+/* pages/account/account.wxss */
+.sign-out-btn{
+  background: #f55f62;
+  color: #fff;
+  position: absolute;
+  bottom: 100rpx;
+  left: 30rpx;
+  right: 30rpx;
+}
+.main{
+  margin-top: 20rpx;
+}
+.account-page{
+  background: #f7f8fa;
+  position: relative;
+  height: 100vh;
+}

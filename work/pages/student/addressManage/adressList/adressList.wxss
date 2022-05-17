@@ -1,0 +1,20 @@
+/* pages/student/addressManage/adressList/adressList.wxss */
+button{
+  width: 90%;
+  margin-top: 30rpx;
+  background: #838ecb;
+  color: #fff;
+  margin-bottom: 50rpx;
+}
+.addressList{
+  overflow-y: scroll;
+}
+.del-btn{
+  background: #f55f62;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 120rpx;
+}

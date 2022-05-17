@@ -1,0 +1,21 @@
+/* components/login/loginLogo.wxss */
+.login-logo{
+  padding-top: 70rpx;
+  padding-bottom: 50rpx;
+  height: 300rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-logo .logo{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.login-logo .logo-text{
+  font-size: large;
+  margin-top: 20rpx;
+  color: #e9867a;
+}

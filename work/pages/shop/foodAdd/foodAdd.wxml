@@ -1,0 +1,15 @@
+<!--pages/shop/foodAdd/foodAdd.wxml-->
+<view class="foodAdd">
+  <van-cell-group>
+    <van-field  model:value="{{ foodName }}" placeholder="请输入商品名称" border="{{ false }}"  label="名称" />
+    <van-field  model:value="{{ foodDesc }}" placeholder="请输入商品描述" border="{{ false }}"  label="描述" />
+    <van-field  model:value="{{ foodPrice }}" placeholder="请输入商品价格" border="{{ false }}"  label="价格" />
+    <van-field disabled bindtap="showCateSelect"  model:value="{{ foodCateName }}" placeholder="请输入商品类别" border="{{ false }}"  label="类别" />
+  </van-cell-group>
+  <view class="item-tip">上传商品图片</view>
+  <van-uploader class="upload" bind:after-read="afterRead" bind:delete="deleteImage" max-count="1" deletable="{{ true }}" file-list="{{ fileList }}" />
+  <button class="btn" bindtap="addFood">添 加</button>
+  <van-action-sheet show="{{ cateShow }}" title="结束营业时间" bind:close="onClose">
+    <van-picker columns="{{ columns }}" bind:change="onChange" />
+    </van-action-sheet>
+</view>

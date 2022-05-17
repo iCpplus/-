@@ -1,0 +1,47 @@
+/* pages/student/addressManage/addressCreate/addressCreate.wxss */
+.map{
+  width: 100%;
+  height: 400rpx;
+}
+.addressCreate{
+  background: #f7f8fa;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form1{
+  width: 90%;
+  background: #fff;
+  border-radius: 22rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  position: absolute;
+  top: 350rpx;
+}
+.form2{
+  width: 90%;
+  background: #fff;
+  border-radius: 22rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  position: absolute;
+  top: 600rpx;
+}
+.check{
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  font-size: medium;
+}
+.btn{
+  width: 90%;
+  background: #838ecb;
+  color: #fff;
+  position: absolute;
+  top:1000rpx
+}

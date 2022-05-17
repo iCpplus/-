@@ -1,0 +1,37 @@
+<!--pages/shop/shopEdit/shopEdit.wxml-->
+<view>
+  <van-cell-group>
+    <van-field model:value="{{ shopName }}" placeholder="请输入商户名称" border="{{ false }}" label="名称" />
+    <van-field model:value="{{ shopDesc }}" placeholder="请输入商户描述" border="{{ false }}" type="textarea" autosize label="描述" />
+    <van-field value="{{ phone }}" placeholder="请输入商户联系方式" border="{{ false }}" type="textarea" autosize label="联系方式" />
+    <van-field model:value="{{ shopAddress }}" placeholder="请输入商户位置" border="{{ false }}" label="位置" />
+    <van-field model:value="{{ minPrice }}" placeholder="请输入起送费" border="{{ false }}" label="起送费" />
+    <van-field model:value="{{ postPrice }}" placeholder="请输入配送费" border="{{ false }}" label="配送费" />
+    <view class="time-contain">
+      <view class="item-name">营业时间</view>
+      <view class="date-contain">
+        <text bindtap="editStartDate">{{startDate}}</text>-<text bindtap="editEndDate">{{endDate}}</text>
+      </view>
+
+
+    </view>
+    <view class="check"><text>是否营业中</text>
+        <text style="flex:1"></text>
+        <van-checkbox value="{{ checked }}" bind:change="onChange"></van-checkbox>
+      </view>
+    <view class="item-tip">上传商户封面</view>
+    <van-uploader class="upload" bind:after-read="afterRead" bind:delete="deleteImage" max-count="1"
+      deletable="{{ true }}" file-list="{{ fileList }}" />
+    <button class="btn" bindtap="confirmShopInfo">确定</button>
+
+    <van-action-sheet show="{{ startShow }}" title="开始营业时间" bind:close="onClose">
+      <van-datetime-picker type="time" cancel-button-text="" confirm-button-text="" value="{{ startDate }}"
+        min-hour="{{ minHour }}" max-hour="{{ maxHour }}" bind:input="onInputStart" />
+    </van-action-sheet>
+    <van-action-sheet show="{{ endShow }}" title="结束营业时间" bind:close="onClose">
+      <van-datetime-picker type="time" cancel-button-text="" confirm-button-text="" value="{{ endDate }}"
+        min-hour="{{ minHour }}" max-hour="{{ maxHour }}" bind:input="onInputEnd" />
+    </van-action-sheet>
+
+  </van-cell-group>
+</view>

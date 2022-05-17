@@ -1,0 +1,42 @@
+/* pages/shop/shopEdit/shopEdit.wxss */
+.time-contain{
+  padding: 20rpx;
+  font-size: medium;
+  display: flex;
+  align-items: center;
+}
+.date-contain{
+  margin-left: 30rpx;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn{
+  margin-top: 100rpx;
+  width: 80%;
+  background: #838ecb;
+  color: #fff;
+}
+.item-name{
+  margin-left: 10rpx;
+}
+.item-tip{
+  font-size: medium;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.upload{
+  margin-left: 30rpx;
+
+}
+.check{
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  font-size: medium;
+}

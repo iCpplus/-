@@ -1,0 +1,86 @@
+/* components/shop/home/home.wxss */
+.shop-home{
+  height: 100vh;
+  position: relative;
+}
+.van-card{
+  margin-top: 20rpx;
+}
+.holder{
+  height: 200rpx;
+  background: #838ecb;
+}
+.shop-card{
+  position: absolute;
+  height: 300rpx;
+  width: 96%;
+  left: 2%;
+  right: 2%;
+  top: 70rpx;
+  background: #fafafa;
+  border-radius: 30rpx;
+  display: flex;
+  box-sizing: border-box;
+  padding: 20rpx;
+  align-items: center;
+}
+.shop-info{
+  margin-left: 30rpx;
+  height: 200rpx;
+}
+.shop-name{
+  font-size: larger;
+  margin-bottom: 10rpx;
+}
+.holder2{
+  height: 140rpx;
+}
+.shop-address{
+  font-size: small;
+  margin-bottom: 10rpx;
+}
+.shop-des{
+  font-size: small;
+}
+.shop-card image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 30rpx;
+}
+.card-list{
+  margin-top: 300rpx;
+  height: 65vh;
+  overflow-y: scroll;
+}
+.bottom-contain{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 390rpx;
+  width: 100%;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+.bottom-contain button{
+  margin-top: 10rpx;
+  width: 340rpx;
+  background-color: #838ecb;
+  color: #fff;
+}
+.time{
+  font-size: small;
+  margin-top: 10rpx;
+}
+.price{
+  font-size: small;
+  margin-top: 10rpx;
+}
+.tags{
+  color: #838ecb;
+  border: 1px #838ecb solid;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

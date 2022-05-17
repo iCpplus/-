@@ -1,0 +1,18 @@
+/* pages/student/comment/comment.wxss */
+.btn{
+  background: #838ecb;
+  width: 80%;
+  color: #fff;
+  margin-top: 50rpx;
+}
+.comment{
+  margin-bottom: 20rpx;
+}
+.contain{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40rpx;
+  margin-bottom: 50rpx;
+}

@@ -1,0 +1,29 @@
+/* components/rider/home/home.wxss */
+.rider-home{
+  background: #f7f8fa;
+  height: 100vh;
+  padding: 20rpx;
+  overflow-y: scroll;
+}
+.order-card{
+  background: #fff;
+  padding: 10rpx;
+  border-radius: 25rpx;
+  margin-top: 20rpx;
+}
+.order-text{
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+.order-item{
+  font-size: large;
+}
+.card-btn{
+  width: 90%;
+  background: #838ecb;
+  color: #fff;
+  margin-top: 20rpx;
+}
+.holder{
+  height: 200rpx;
+}

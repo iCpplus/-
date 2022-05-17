@@ -1,0 +1,46 @@
+<!--pages/shop/orderDetail/orderDetail.wxml-->
+<view class="order-detail">
+  <view class="holder">
+  </view>
+  <view class="main">
+    <!-- <view class="card">
+      <view>感谢信任，期待再次光临</view>
+    </view> -->
+    <view class="order-content">
+      <view class="shop-name">{{detail.store_name}} ></view>
+      <view class="food" wx:for="{{detail.foods}}" wx:key="{{item.food_id}}">
+        <image src="{{item.food_icon}}"></image>
+        <view class="food-text">
+          <view class="food-name">{{item.food_name}}</view>
+          <view class="food-num">× {{item.food_quantity}}</view>
+        </view>
+        <view class="food-price">￥{{item.food_price}}</view>
+      </view>
+      <view class="rider">
+        <view class="rider-text">配送费</view>
+        <view style="flex:1"></view>
+        <view class="rider-price">￥{{detail.post_price}}</view>
+      </view>
+      <view class="all">
+        <view class="all-price">总计 ￥{{detail.post_price+detail.order_amount}}</view>
+      </view>
+    </view>
+    <van-divider />
+    <view class="detail">
+      <van-cell-group>
+        <van-cell title="收货地址" value="{{detail.buyer_address}}" />
+        <van-cell title="收货人信息" value="{{detail.buyer_name+' '+detail.buyer_phone}}" />
+        <van-cell title="备注" value="{{detail.buyer_remark}}" />
+        <van-cell title="订单编号" value="{{detail.order_id}}" />
+        <!-- <van-cell title="送达时间" value="2022-03-09 15：33" /> -->
+        <van-cell title="下单时间" value="{{detail.create_time}}" />
+      </van-cell-group>
+      <view class="holder2">
+      </view>
+      <van-cell-group wx:if="{{detail.runner_phone}}">
+        <van-cell title="配送员姓名" value="{{detail.runner_name}}" />
+        <van-cell title="配送员手机号" value="{{detail.runner_phone}}" />
+      </van-cell-group>
+    </view>
+  </view>
+</view>

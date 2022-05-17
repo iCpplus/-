@@ -1,0 +1,29 @@
+/* pages/login/login.wxss */
+.login-page{
+  padding: 20rpx;
+}
+.tip{
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+}
+.login-logo .login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: chocolate;
+}
+.main-button{
+  background-color: #838ecb;
+  color: #fff;
+}
+.bottom-contain{
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-contain button{
+  margin-top: 10rpx;
+  width: 340rpx;
+  background-color: #f55f62;
+  color: #fff;
+}

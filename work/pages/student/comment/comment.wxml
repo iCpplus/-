@@ -1,0 +1,50 @@
+<!--pages/student/comment/comment.wxml-->
+<view>
+  <view class="contain">
+    <text>用户评分</text>
+    <van-rate
+  value="{{ value }}"
+  readonly="{{flag!=0}}"
+  size="{{ 25 }}"
+  color="#ffd21e"
+  void-icon="star"
+  void-color="#eee"
+  bind:change="onChange"
+/>
+  </view>
+
+<van-cell-group class="comment">
+  <van-field
+    model:value="{{ message1 }}"
+    disabled="{{flag!=0}}"
+    label="用户评论"
+    type="textarea"
+    placeholder=""
+    autosize
+    border="{{ false }}"
+  />
+</van-cell-group>
+<van-cell-group class="comment">
+  <van-field
+    model:value="{{ message2 }}"
+    label="商家评论"
+    disabled="{{flag!=2}}"
+    type="textarea"
+    placeholder=""
+    autosize
+    border="{{ false }}"
+  />
+</van-cell-group>
+<van-cell-group class="comment">
+  <van-field
+    model:value="{{ message3 }}"
+    label="配送员评论"
+    disabled="{{flag!=3}}"
+    type="textarea"
+    placeholder=""
+    autosize
+    border="{{ false }}"
+  />
+</van-cell-group>
+<button wx:if="{{flag!=1}}" class="btn" bindtap="confirm">确定评价</button>
+</view>

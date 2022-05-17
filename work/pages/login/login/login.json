@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "loginLogo":"/components/login/loginLogo/loginLogo"
+  }
+
+}

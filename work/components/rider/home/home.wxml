@@ -1,0 +1,10 @@
+<!--components/rider/home/home.wxml-->
+<view class="rider-home">
+  <view class="order-card" wx:for="{{list}}" wx:key="{{item.order_id}}">
+    <view class="order-text"><text class="order-tip">取货：</text> <text class="order-item">南苑餐厅小宝王</text></view>
+    <view class="order-text"><text class="order-tip">送货：</text> <text class="order-item">南苑二号113</text></view>
+    <view class="order-text"><text class="order-tip">配送费：</text> <text class="order-item" style="color:#f55f62">￥6</text> </view>
+    <button class="card-btn" data-orderid="{{item.order_id}}" bindtap="fightOrder">抢单</button>
+  </view>
+  <view class="holder"></view>
+</view>

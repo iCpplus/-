@@ -1,0 +1,17 @@
+/* pages/student/announce/announce.wxss */
+button{
+  width: 80%;
+  background: #838ecb;
+  color: #fff;
+  margin-top: 50rpx;
+}
+.title{
+  text-align: center;
+  font-size: xx-large;
+}
+.p{
+  margin-top: 30rpx;
+}
+.c{
+  padding: 20rpx;
+}

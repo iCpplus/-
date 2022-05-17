@@ -1,0 +1,8 @@
+<!--pages/account/account.wxml-->
+<view class="account-page">
+  <van-cell title="修改密码" bindtap="updatePassword" is-link />
+  <van-cell title="个人信息" bindtap="updateUserInfo" is-link />
+  <van-cell title="隐私管理" is-link />
+  <button class="sign-out-btn" bindtap="signOut">
+    退出登录</button>
+</view>

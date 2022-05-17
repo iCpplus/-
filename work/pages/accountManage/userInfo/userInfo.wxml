@@ -1,0 +1,9 @@
+<!--pages/accountManage/userInfo/userInfo.wxml-->
+<view class="user-info">
+  <van-cell-group>
+    <van-field model:value="{{ nickname }}" placeholder="请输入用户名称" border="{{ false }}" bind:change="onChange" label="用户名" />
+  </van-cell-group>
+  <view class="item-tip">上传用户头像</view>
+  <van-uploader class="upload" bind:after-read="afterRead" bind:delete="deleteImage" max-count="1" deletable="{{ true }}" file-list="{{ fileList }}" />
+  <button class="btn" bindtap="saveInfo">修改信息</button>
+</view>

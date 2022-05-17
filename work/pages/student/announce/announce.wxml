@@ -1,0 +1,9 @@
+<!--pages/student/announce/announce.wxml-->
+<view class="c">
+<view class="title">{{detail.title}}</view>
+<view class="p">
+{{detail.content}}
+</view>
+
+<button wx:if="{{detail.store_id}}" bindtap="goShop">前往商铺</button>
+</view>

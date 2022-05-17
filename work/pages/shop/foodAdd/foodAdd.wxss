@@ -1,0 +1,17 @@
+/* pages/shop/foodAdd/foodAdd.wxss */
+.item-tip{
+  font-size: medium;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.upload{
+  margin-left: 30rpx;
+
+}
+.btn{
+  margin-top: 100rpx;
+  width: 80%;
+  background: #838ecb;
+  color: #fff;
+}

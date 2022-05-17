@@ -1,0 +1,71 @@
+/* pages/student/orderDetail/orderDetail.wxss */
+.order-detail{
+  position: relative;
+}
+.holder{
+  height: 200rpx;
+  background: #838ecb;
+}
+.main{
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 30rpx;
+  background: #f7f8fa;
+  position: absolute;
+  top: 100rpx;
+  border-radius: 30rpx;
+}
+.order-content{
+  padding: 10rpx;
+}
+.shop-name{
+  font-size: large;
+  margin-bottom: 20rpx;
+}
+.food{
+  display: flex;
+  position: relative;
+  align-items: center;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+.food image{
+  border-radius: 10rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.food-text{
+  margin-left: 20rpx;
+}
+.food-name{
+  font-size: medium;
+}
+.food-num{
+  font-size: small;
+  margin-top: 10rpx;
+}
+.food-price{
+  position: absolute;
+  right: 20rpx;
+  top: 40rpx;
+}
+.rider{
+  display: flex;
+}
+.rider-price{
+  margin-right: 20rpx;
+}
+.all{
+  position: relative;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+.all-price{
+  position: absolute;
+  right: 20rpx;
+}
+.detail{
+  border-radius: 20rpx;
+}
+

@@ -1,0 +1,20 @@
+<!--pages/login/studentLogin/studentLogin.wxml-->
+<view class="student-login">
+  <van-notify id="van-notify" />
+  <loginLogo></loginLogo>
+  <view class="form-contain">
+    <van-field model:value="{{ username }}" placeholder="请输入用户名" border="{{ false }}" />
+    <van-divider />
+    <van-field model:value="{{ password }}" type="password" placeholder="请输入密码" border="{{ false }}" />
+    <van-divider />
+    <view class="btn-contain">
+      <button bindtap="login">登录</button>
+      <view></view>
+      <button bindtap="register">注册</button>
+    </view>
+    <view class="text-contain">
+      <text class="text">登录代表您已同意 </text>
+      <text class="text highlight">中工好饿用户服务协议、隐私协议</text>
+    </view>
+  </view>
+</view>

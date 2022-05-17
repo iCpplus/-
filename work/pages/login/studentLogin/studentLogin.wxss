@@ -1,0 +1,22 @@
+/* pages/login/studentLogin/studentLogin.wxss */
+.student-login{
+padding: 20px;
+}
+.btn-contain{
+  display: flex;
+}
+.btn-contain button{
+  width: 300rpx;
+  background-color: #838ecb;
+  color: #fff;
+}
+.text-contain{
+  text-align: center;
+  margin-top: 20px;
+}
+.text-contain .text{
+  font-size: small;
+}
+.text-contain .highlight{
+  color:#f55f62;
+}

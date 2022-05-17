@@ -1,0 +1,17 @@
+<!--pages/shop/cateManage/cateManage.wxml-->
+<view class="contain">
+  <view class="holder"></view>
+  <van-notify id="van-notify" />
+  <van-cell-group>
+    <van-field model:value="{{ cateName }}" center clearable placeholder="请输入菜品名" border="{{ false }}" use-button-slot>
+      <van-button slot="button" bindtap="addCate" size="small" type="primary">
+        添加菜品
+      </van-button>
+    </van-field>
+  </van-cell-group>
+  <van-swipe-cell wx:for="{{list}}" wx:key="item.category_id" id="swipe-cell" right-width="{{ 65 }}"
+    left-width="{{ 0 }}">
+    <van-cell title="{{item.category_name}}" data-item="{{item}}" is-link />
+    <view class="del-btn" data-item="{{item}}" bindtap="deleteCate" slot="right">删除</view>
+  </van-swipe-cell>
+</view>

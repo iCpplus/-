@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "home":"/components/student/home/home",
+    "order":"/components/student/order/order",
+    "profile":"/components/student/profile/profile"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#828dc9",
+  "backgroundTextStyle":"dark"
+
+}

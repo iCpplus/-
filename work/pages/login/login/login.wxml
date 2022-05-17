@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<view class="login-page">
+  <loginLogo></loginLogo>
+  <view class="tip">请选择您的身份</view>
+  <view class="login-form">
+    <button class="main-button" bindtap="studentLogin">学生</button>
+    <view class="bottom-contain">
+      <button type="warning" bindtap="shopLogin">商家</button>
+      <view style="flex:1"></view>
+      <button type="warning" bindtap="riderLogin">配送员</button>
+    </view>
+    <!-- <map id="myMap" show-location />
+
+    <button type="primary" bindtap="getCenterLocation">获取位置</button>
+    <button type="primary" bindtap="moveToLocation">移动位置</button>
+    <button type="primary" bindtap="translateMarker">移动标注</button>
+    <button type="primary" bindtap="includePoints">缩放视野展示所有经纬度</button> -->
+  </view>
+</view>
